@@ -37,9 +37,9 @@ Cyclistic is a fictional bike-share company in Chicago with a fleet of 5,800+ bi
 
 | # | Finding | Insight |
 |---|---|---|
-| 1 | **Rider split** | Members take 76.7% of rides. Casual riders take 23.3% — nearly 150,000 trips in winter alone |
-| 2 | **Ride duration** | Casual riders average 15.6 mins vs 11.2 mins for members — 38.7% longer |
-| 3 | **Day of week** | Members peak on Tuesdays. Casual riders peak on Saturdays — completely opposite |
+| 1 | **Rider split** | Members take 76.7% of rides. Casual riders take 23.3%, nearly 150,000 trips in winter alone |
+| 2 | **Ride duration** | Casual riders average 15.6 mins vs 11.2 mins for members, 38.7% longer |
+| 3 | **Day of week** | Members peak on Tuesdays. Casual riders peak on Saturdays, completely opposite |
 | 4 | **Monthly growth** | Casual ridership grew 255% Jan to Mar vs 104% for members |
 | 5 | **Bike type** | 72.4% of casual rides use electric bikes vs 66.3% for members |
 | 6 | **Peak hours** | Members show double commute peak at 8am and 5pm. Casuals peak at 2pm |
@@ -67,7 +67,7 @@ Casual riders average 15.6 mins per trip. A personalised in-app message after ea
 |---|---|
 | **Excel / WPS Sheets** | Initial data exploration and pivot table analysis |
 | **Python (Pandas)** | Data combining, cleaning and transformation |
-| **Matplotlib & Seaborn** | Data visualisation — 6 professional charts |
+| **Matplotlib & Seaborn** | Data visualisation, 6 professional charts |
 | **SQL (SQLite3)** | 8 structured queries for targeted analysis |
 | **Tableau Public** | 2 interactive dashboard pages |
 
@@ -132,13 +132,13 @@ This project followed the **6-phase Google Data Analytics framework:**
 ASK → PREPARE → PROCESS → ANALYZE → SHARE → ACT
 ```
 
-### Phase 1 — Ask
+### Phase 1: Ask
 Defined business task and identified key stakeholders.
 
-### Phase 2 — Prepare
-Downloaded 3 months of Divvy trip data (Jan–Mar 2026). Assessed credibility using ROCCC framework. Confirmed public licence for use.
+### Phase 2: Prepare
+Downloaded 3 months of Divvy trip data (Jan-Mar 2026). Assessed credibility using ROCCC framework. Confirmed public licence for use.
 
-### Phase 3 — Process
+### Phase 3: Process
 Combined 3 CSV files (656,274 rows) into single dataset using Python. Applied 9 cleaning steps. Removed 16,728 invalid records. Final clean dataset: 639,526 rides.
 
 **Cleaning steps:**
@@ -151,20 +151,20 @@ Combined 3 CSV files (656,274 rows) into single dataset using Python. Applied 9 
 - Standardised text column values
 - Removed 20 December outlier rows
 
-### Phase 4 — Analyse
+### Phase 4: Analyse
 Ran 8 SQL queries using SQLite3. Built pivot tables in Excel. Identified 8 key behavioural differences between rider types.
 
-### Phase 5 — Share
+### Phase 5: Share
 Created 6 Python visualisations. Built 2-page interactive Tableau dashboard. Produced full PDF and Word report.
 
-### Phase 6 — Act
+### Phase 6: Act
 Delivered 3 data-backed strategic recommendations for the Cyclistic marketing team.
 
 ---
 
 ## ⚠️ Limitations
 
-- **Seasonal bias:** Analysis covers winter months (Jan–Mar 2026) only. Casual ridership is naturally lower in winter. Summer patterns not captured.
+- **Seasonal bias:** Analysis covers winter months (Jan-Mar 2026) only. Casual ridership is naturally lower in winter. Summer patterns not captured.
 - **Privacy constraints:** Individual riders cannot be tracked across trips due to data privacy rules.
 - **Tourist vs resident:** Cannot determine whether casual riders are Chicago tourists or residents.
 
