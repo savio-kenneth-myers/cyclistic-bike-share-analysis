@@ -105,22 +105,22 @@ cyclistic-bike-share-analysis/
 ## 📈 Visualizations
 
 ### Rides by Rider Type
-![Rides by Rider Type](Visualizations/01_rides_by_rider_type.png)
+![Rides by Rider Type](Visualization/01_rides_by_rider_type.png)
 
 ### Average Ride Length
-![Average Ride Length](Visualizations/02_avg_ride_length.png)
+![Average Ride Length](Visualization/02_avg_ride_length.png)
 
 ### Rides by Day of Week
-![Rides by Day of Week](Visualizations/03_rides_by_day.png)
+![Rides by Day of Week](Visualization/03_rides_by_day.png)
 
 ### Monthly Ride Trends
-![Monthly Trends](Visualizations/04_monthly_trends.png)
+![Monthly Trends](Visualization/04_monthly_trends.png)
 
 ### Rides by Bike Type
-![Rides by Bike Type](Visualizations/05_rides_by_bike_type.png)
+![Rides by Bike Type](Visualization/05_rides_by_bike_type.png)
 
 ### Peak Hours by Rider Type
-![Peak Hours](Visualizations/06_peak_hours.png)
+![Peak Hours](Visualization/06_peak_hours.png)
 
 ---
 
