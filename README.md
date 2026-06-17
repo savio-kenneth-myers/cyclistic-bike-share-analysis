@@ -9,6 +9,25 @@
 
 ---
 
+## 📋 Table of Contents
+
+- [Quick Links](#-quick-links)
+- [Dashboard Demo](#-dashboard-demo)
+- [Project Overview](#-project-overview)
+- [Key Findings](#-key-findings)
+- [Top 3 Recommendations](#-top-3-recommendations)
+- [Tools and Technologies](#️-tools-and-technologies)
+- [Repository Structure](#-repository-structure)
+- [How to Reproduce This Analysis](#-how-to-reproduce-this-analysis)
+- [Visualizations](#-visualizations)
+- [Analysis Process](#-analysis-process)
+- [Limitations](#️-limitations)
+- [Dataset Details](#-dataset-details)
+- [About the Analyst](#-about-the-analyst)
+- [Licence](#-licence)
+
+---
+
 ## 📌 Quick Links
 
 | Resource | Link |
@@ -89,10 +108,20 @@ cyclistic-bike-share-analysis/
 ├── 📓 Analysis/
 │   └── cyclistic_analysis.ipynb     # Full Jupyter notebook with all code
 │
+├── 🗄️ SQL/
+│   ├── 01_rider_split.sql
+│   ├── 02_avg_ride_length.sql
+│   ├── 03_rides_by_day.sql
+│   ├── 04_monthly_trends.sql
+│   ├── 05_rides_by_bike_type.sql
+│   ├── 06_peak_hours.sql
+│   ├── 07_top_stations.sql
+│   └── 08_weekend_ride_length.sql
+│
 ├── 🎥 Demo/
 │   └── dashboard_demo.gif
 │
-├── 🖼️ Visualizations/
+├── 🖼️ Visualization/
 │   ├── 01_rides_by_rider_type.png
 │   ├── 02_avg_ride_length.png
 │   ├── 03_rides_by_day.png
@@ -105,11 +134,33 @@ cyclistic-bike-share-analysis/
 │   └── Cyclistic_Analysis_Report_Savio_Kenneth_Myers.docx
 │
 ├── .gitignore                        # Excludes large CSV file
+├── LICENSE                           # MIT licence for code
+├── requirements.txt                  # Python dependencies
 └── README.md                         # This file
 ```
 
 > **Note:** The clean dataset (639,526 rows, 141MB) exceeds GitHub's file size limit.
 > Download it directly: [Google Drive Link](https://drive.google.com/file/d/1XeKoFtS50-5cNf_yR19J_kpjNM3J_LTN/view?usp=sharing)
+
+---
+
+## ⚙️ How to Reproduce This Analysis
+
+1. Clone the repo:
+   ```
+   git clone https://github.com/savio-kenneth-myers/cyclistic-bike-share-analysis.git
+   cd cyclistic-bike-share-analysis
+   ```
+2. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+3. Download the clean dataset from the [Google Drive link](https://drive.google.com/file/d/1XeKoFtS50-5cNf_yR19J_kpjNM3J_LTN/view?usp=sharing) above (too large for GitHub) and place it in the `Analysis/` folder.
+4. Open and run the notebook:
+   ```
+   jupyter notebook Analysis/cyclistic_analysis.ipynb
+   ```
+5. SQL queries used for the analysis can be run independently against the same dataset, see the `SQL/` folder.
 
 ---
 
@@ -208,9 +259,6 @@ Junior Data Analyst | Google Data Analytics Certificate
 
 This project is for educational and portfolio purposes. Data used under [Motivate International Inc. Data Licence Agreement](https://www.divvybikes.com/data-license-agreement).
 
----
-
-*Completed: April 2026 | Google Data Analytics Professional Certificate Capstone*
 ---
 
 *Completed: April 2026 | Google Data Analytics Professional Certificate Capstone*
