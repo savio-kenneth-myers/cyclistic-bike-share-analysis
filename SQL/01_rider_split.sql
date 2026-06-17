@@ -1,10 +1,9 @@
 -- Rider Split: total rides and percentage share by rider type
 -- Table assumed: trips (cleaned dataset, 639,526 rows)
-
-SELECT
-    member_casual,
-    COUNT(*) AS total_rides,
-    ROUND(100.0 * COUNT(*) / (SELECT COUNT(*) FROM trips), 1) AS pct_of_total
-FROM trips
-GROUP BY member_casual
-ORDER BY total_rides DESC;
+SELECT 
+        member_casual                                   AS rider_type,
+        COUNT(*)                                        AS total_rides,
+        ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER(), 2) AS percentage
+    FROM trips
+    GROUP BY member_casual
+    ORDER BY total_rides DESC
