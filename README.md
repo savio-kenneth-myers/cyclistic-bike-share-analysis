@@ -21,6 +21,14 @@
 
 ---
 
+## 🎥 Dashboard Demo
+
+![Dashboard Demo](Demo/dashboard_demo.gif)
+
+👉 [Open the full interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/savio.kenneth.myers/viz/CyclisticBike-ShareAnalysisJan-Mar2026SavioKennethMyers/Overview)
+
+---
+
 ## 📖 Project Overview
 
 This is a capstone project completed as part of the **Google Data Analytics Professional Certificate**. The business scenario is fictional, designed to simulate a real-world marketing analytics problem. The underlying trip data is genuine, sourced from Motivate International Inc.'s publicly available Divvy bike-share dataset for Chicago, used in accordance with their Data Licence Agreement.
@@ -80,6 +88,9 @@ cyclistic-bike-share-analysis/
 │
 ├── 📓 Analysis/
 │   └── cyclistic_analysis.ipynb     # Full Jupyter notebook with all code
+│
+├── 🎥 Demo/
+│   └── dashboard_demo.gif
 │
 ├── 🖼️ Visualizations/
 │   ├── 01_rides_by_rider_type.png
@@ -197,6 +208,9 @@ Junior Data Analyst | Google Data Analytics Certificate
 
 This project is for educational and portfolio purposes. Data used under [Motivate International Inc. Data Licence Agreement](https://www.divvybikes.com/data-license-agreement).
 
+---
+
+*Completed: April 2026 | Google Data Analytics Professional Certificate Capstone*
 ---
 
 *Completed: April 2026 | Google Data Analytics Professional Certificate Capstone*
