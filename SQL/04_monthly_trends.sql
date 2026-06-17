@@ -1,26 +1,18 @@
 -- Monthly Ride Trends, January through March, by rider type
 
 SELECT
-    month,
-    member_casual,
-    COUNT(*) AS total_rides
-FROM trips
-GROUP BY month, member_casual
-ORDER BY month, member_casual;
-
--- Growth rate from January to March per rider type
-WITH monthly AS (
-    SELECT month, member_casual, COUNT(*) AS total_rides
+        month,
+        SUM(CASE WHEN member_casual = 'member' 
+            THEN 1 ELSE 0 END)                          AS member_rides,
+        SUM(CASE WHEN member_casual = 'casual' 
+            THEN 1 ELSE 0 END)                          AS casual_rides,
+        COUNT(*)                                        AS total_rides,
+        ROUND(AVG(ride_length_mins), 2)                 AS avg_ride_mins
     FROM trips
-    GROUP BY month, member_casual
-)
-SELECT
-    member_casual,
-    ROUND(
-        100.0 * (
-            (SELECT total_rides FROM monthly m2 WHERE m2.month = 3 AND m2.member_casual = m.member_casual) -
-            (SELECT total_rides FROM monthly m1 WHERE m1.month = 1 AND m1.member_casual = m.member_casual)
-        ) / (SELECT total_rides FROM monthly m1 WHERE m1.month = 1 AND m1.member_casual = m.member_casual)
-    , 1) AS pct_growth_jan_to_mar
-FROM monthly m
-GROUP BY member_casual;
+    GROUP BY month
+    ORDER BY
+        CASE month
+            WHEN 'January'  THEN 1
+            WHEN 'February' THEN 2
+            WHEN 'March'    THEN 3
+        END
