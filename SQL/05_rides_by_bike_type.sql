@@ -2,14 +2,12 @@
 -- Reveals casual riders favour electric bikes more than members
 
 SELECT
-    member_casual,
-    rideable_type,
-    COUNT(*) AS total_rides,
-    ROUND(
-        100.0 * COUNT(*) / (
-            SELECT COUNT(*) FROM trips t2 WHERE t2.member_casual = trips.member_casual
-        ), 1
-    ) AS pct_within_rider_type
-FROM trips
-GROUP BY member_casual, rideable_type
-ORDER BY member_casual, total_rides DESC;
+        rideable_type                                   AS bike_type,
+        SUM(CASE WHEN member_casual = 'member' 
+            THEN 1 ELSE 0 END)                          AS member_rides,
+        SUM(CASE WHEN member_casual = 'casual' 
+            THEN 1 ELSE 0 END)                          AS casual_rides,
+        COUNT(*)                                        AS total_rides
+    FROM trips
+    GROUP BY rideable_type
+    ORDER BY total_rides DESC
