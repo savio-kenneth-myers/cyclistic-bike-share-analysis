@@ -1,17 +1,11 @@
 -- Average Ride Length by rider type, plus % difference between casual and member
 
 SELECT
-    member_casual,
-    ROUND(AVG(ride_length_mins), 1) AS avg_ride_length_mins
-FROM trips
-GROUP BY member_casual
-ORDER BY avg_ride_length_mins DESC;
-
--- % longer casual rides are vs member rides
-SELECT
-    ROUND(
-        100.0 * (
-            (SELECT AVG(ride_length_mins) FROM trips WHERE member_casual = 'casual') -
-            (SELECT AVG(ride_length_mins) FROM trips WHERE member_casual = 'member')
-        ) / (SELECT AVG(ride_length_mins) FROM trips WHERE member_casual = 'member')
-    , 1) AS pct_longer_casual_vs_member;
+        member_casual                                   AS rider_type,
+        ROUND(AVG(ride_length_mins), 2)                 AS avg_ride_mins,
+        ROUND(MIN(ride_length_mins), 2)                 AS min_ride_mins,
+        ROUND(MAX(ride_length_mins), 2)                 AS max_ride_mins,
+        ROUND(AVG(ride_length_mins) / 60, 2)            AS avg_ride_hours
+    FROM trips
+    GROUP BY member_casual
+    ORDER BY avg_ride_mins DESC
