@@ -33,7 +33,7 @@
 | Resource | Link |
 |---|---|
 | 📊 Tableau Dashboard | [View Live Dashboard](https://public.tableau.com/views/CyclisticBike-ShareAnalysisJan-Mar2026SavioKennethMyers/Overview?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) |
-| 📄 Full PDF Report | [Download Report](https://drive.google.com/file/d/1ygyad4_BM6hzkNRrGwIKe_2wicqTqYgz/view?usp=sharing) |
+| 📄 Full PDF Report | [Download Report](https://drive.google.com/file/d/1N0Rijy9fGk7XYPPlNykL_UH4bwgO_Imm/view?usp=sharing) |
 | 💾 Clean Dataset | [Download CSV](https://drive.google.com/file/d/1XeKoFtS50-5cNf_yR19J_kpjNM3J_LTN/view?usp=sharing) |
 | 📓 Jupyter Notebook | [View Analysis](Analysis/cyclistic_analysis.ipynb) |
 | 🗃️ Raw Data Source | [Divvy Trip Data](https://divvy-tripdata.s3.amazonaws.com/index.html) |
